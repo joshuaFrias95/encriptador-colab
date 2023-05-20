@@ -3,8 +3,11 @@ const tituloMensaje = document.getElementById("titulo-mensaje");
 const parrafo = document.getElementById("parrafo");
 const resultado = document.getElementById("resultado");
 const muñeco = document.getElementById("muñeco");
-
+const btncopiar = document.getElementById("btncopiar");
 let textoCifrado;
+
+btncopiar.style.display = "none";
+
 
 function encriptar() {
   
@@ -16,6 +19,7 @@ function encriptar() {
       resultado.textContent = textoCifrado;
       parrafo.textContent = "";
       muñeco.src = "./img/encriptado.jpg";
+      btncopiar.style.display = "block";
 
       console.log(textoCifrado);
 
@@ -39,6 +43,7 @@ function desencriptar() {
     resultado.textContent = textoCifrado;
     parrafo.textContent = "";
     muñeco.src = "./img/encriptado.jpg";
+    btncopiar.style.display = "block";
 
     console.log(textoCifrado);
 
