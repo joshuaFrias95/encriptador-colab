@@ -52,6 +52,8 @@ function desencriptar() {
   }
 }
 
-function clipboard() {
+function copiar() {
   
+  navigator.clipboard.writeText(resultado.innerHTML);
+  console.log(resultado.innerHTML)
 }
