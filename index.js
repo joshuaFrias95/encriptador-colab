@@ -12,7 +12,8 @@ function encriptar() {
     .replace(/u/gi, "ufat");
 
   if (texto.length != 0) {
-    document.getElementById("texto").value = textoCifrado;
+    //document.getElementById("texto").value = textoCifrado;
+    resultado.textContent = textoCifrado;
     tituloMensaje.textContent = "Texto encriptado con éxito";
     parrafo.textContent = "";
     muñeco.src ="./img/encriptado.jpg";   
@@ -38,7 +39,8 @@ function desencriptar() {
     .replace(/ufat/gi, "u");
 
     if (texto.length != 0) {
-      document.getElementById("texto").value = textoCifrado;
+      //document.getElementById("texto").value = textoCifrado;
+      resultado.textContent = textoCifrado;
       tituloMensaje.textContent = "Texto desencriptado con éxito";
       parrafo.textContent = "";
       muñeco.src ="./img/desencriptado.jpg";   
@@ -49,3 +51,10 @@ function desencriptar() {
       alert("Debes ingresar algún texto");
     }
   }
+
+
+function copiar() {
+  
+  navigator.clipboard.writeText(resultado.innerHTML);
+  console.log(resultado.innerHTML)
+}
